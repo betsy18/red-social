@@ -104,7 +104,7 @@ $(document).ready(function() {
     event.preventDefault();
     if ($(this).val().length > 2) {
       $validateName = true;
-      NewActive();
+      newActive();
     } else {
       $validateName = false;
       $btnNew.attr('disabled', true);
@@ -116,7 +116,7 @@ $(document).ready(function() {
     // validando que el apellido sea mas de 3 caracteres
     if ($(this).val().length > 3) {
       $validateLastName = true;
-      NewActive();
+      newActive();
     } else {
       $validateLastName = false;
       $btnNew.attr('disabled', true);
@@ -129,7 +129,7 @@ $(document).ready(function() {
     var regExpre = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
     if (regExpre.test($(this).val())) {
       $validateNewEmail = true;
-      NewActive();
+      newActive();
     } else {
       $validateNewEmail = false;
       $btnNew.attr('disabled', true);
@@ -140,7 +140,7 @@ $(document).ready(function() {
     event.preventDefault();
     if ($(this).val().length > 6) {
       $validateNewPassword = true;
-      NewActive();
+      newActive();
     } else {
       $validateNewPassword = false;
       $btnNew.attr('disabled', true);
@@ -150,6 +150,7 @@ $(document).ready(function() {
   $btnNew.on('click', function(event) {
     event.preventDefault();
     localStorage.email = $txtNewEmail.val();
+    localStorage.password = $txtNewPassword.val();
     window.location.href = '../views/list-services.html';
   });
 
@@ -219,7 +220,7 @@ $(document).ready(function() {
     }
   }
 	
-  function NewActive() {
+  function newActive() {
     if ($validateName && $validateLastName && $validateNewEmail && $validateNewPassword) {
       $btnNew.attr('disabled', false);
     }

@@ -99,7 +99,7 @@ footer ul li a{
 	color: #ffffff;
 }
 
-footer ul li a:hover, footer ul li i:hover{
+footer ul li a:hover, .icon-footer i:hover{
 	color: #00c38e;
 	transition-duration: 0.5s;
 	cursor: pointer;
@@ -107,13 +107,14 @@ footer ul li a:hover, footer ul li i:hover{
 
 .icon-footer{
 	color: #ffffff;
+	font-size: 1.4em;
 }
 
 .icon-footer i{
 	padding-right: 1em;
 }
 
-@media screen and (min-width:991px){
+@media screen and (min-width:992px){
 /* section-option */
 
 	.phone{
